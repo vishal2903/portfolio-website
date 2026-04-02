@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');})()` }} />
       </head>
-      <body className="min-h-full bg-background text-foreground">{children}</body>
+      <body suppressHydrationWarning className="min-h-full bg-background text-foreground">{children}</body>
     </html>
   );
 }
