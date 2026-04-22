@@ -1,0 +1,123 @@
+VISHAL SHARMA — RESUME INSTRUCTIONS FOR CLAUDE
+================================================
+Use this file every time I bring a new resume or JD.
+Follow all rules below before writing a single word.
+
+
+STEP 1 — WEB SEARCHES TO RUN FIRST
+------------------------------------
+Always run these before starting:
+
+1. "ATS friendly resume tips [current year] AI engineer"
+2. "resume bullet points impact vs process what works best hiring managers [current year]"
+3. "best cover letter structure [role] [current year] what hiring managers want"
+4. Any JD-specific search if the company or role is niche
+
+
+STEP 2 — BRUTAL JD ASSESSMENT FIRST
+--------------------------------------
+Before writing anything, do a gap analysis:
+
+- List where I am a strong match (direct skill/experience overlap)
+- List where I am weak or missing (honest gaps, do not hide them)
+- List JD keywords I must embed naturally in the resume
+- Identify the 3 most important things this company is hiring for
+- Note any company-specific language (e.g. "orchestration," "embed AI," "end-to-end ownership") and mirror it
+
+
+STEP 3 — RESUME RULES (NON-NEGOTIABLE)
+----------------------------------------
+
+LENGTH
+- Strictly 1 page. No exceptions. Cut ruthlessly if needed.
+- Do not lose tech depth to fit. Cut weak bullets, not strong context.
+
+STRUCTURE — DO NOT CHANGE THE SKELETON
+- Keep original section order: Summary, Skills, Experience, Education
+- Keep project labels inside Experience with tech stack in italics
+- Do not add new sections or rename existing ones
+
+LANGUAGE
+- No em dashes anywhere. Use commas, colons, or periods instead.
+- No phrases like "responsible for," "helped with," "worked on"
+- No buzzword fluff: "passionate," "dynamic," "thrilled," "synergy"
+- No over-explaining process. Lead with result, follow with just enough context.
+- Write in plain, direct, human English. If it sounds like a bot wrote it, rewrite it.
+- US-based companies: write all money in dollars ($), use 100,000+ not 1 lakh+
+
+BULLETS — THE CORE RULE
+- Every bullet = strong action verb + what you built + the number that proves it worked
+- Result comes FIRST in the sentence, not last
+- Max 2 lines per bullet. If it needs 3 lines, split it or cut it.
+- 3 bullets per project max. Pick the 3 highest-impact ones.
+- Process details go inside the result sentence as a subordinate clause, not as the main point
+- Bad: "Designed a 2-phase pipeline where Phase 1 does X and Phase 2 does Y, achieving 87% cost reduction"
+- Good: "Cut AI costs by 87% by replacing raw LLM rendering with a deterministic Python engine"
+
+NUMBERS — ALWAYS INCLUDE
+- Revenue: in dollars for US companies
+- Traffic: 100,000+ not "1 lakh+"
+- Cost savings: percentage and/or dollar amount
+- Resolution rates, uptime, latency, query volume: exact figures
+- Time saved: hours per week, minutes per output
+- Scale: number of agents, templates, datasets, users
+
+ATS KEYWORDS
+- Mirror the JD's exact phrasing, not synonyms
+- Spell out acronyms once: "Retrieval-Augmented Generation (RAG)"
+- Put top keywords in both Summary and Skills sections
+- Skills section: group into 4 labeled rows (AI/LLM, Orchestration, Languages, Infrastructure)
+- Go (Golang) must always be visible, not buried in a comma list
+
+SUMMARY PARAGRAPH
+- Open with the role-level signal: "AI Engineer with end-to-end ownership of..."
+- Hit the 3 biggest metrics in sentence 2
+- Mention open-source MCP work subtly
+- Close with core stack: Python, TypeScript, Go, React
+- Max 4 sentences. No longer.
+
+WHAT TO NEVER DO
+- Never explain a feature or architecture in detail in a bullet
+- Never use em dashes
+- Never write "I am excited" or any version of that in any document
+- Never leave a bullet without a number if a number exists
+- Never change the resume skeleton structure
+- Never add color, tables, columns, or graphics (ATS will break)
+- Never put contact info in the header/footer of the Word doc
+
+
+STEP 4 — COVER LETTER RULES (when requested)
+----------------------------------------------
+
+STRUCTURE (5 paragraphs, 1 page, under 400 words)
+1. Hook: Open with the company's problem, not your story. Name the team/mandate specifically.
+2. Proof block 1: Your most relevant project with 2-3 numbers. Map it to their JD language.
+3. Proof block 2: Full-stack or cost/reliability proof with numbers. End with a line that mirrors their JD bullets.
+4. Why this company specifically: Something that cannot be copy-pasted to another employer.
+5. Close: Specific ask ("20-minute call") + portfolio link. Never "I look forward to hearing from you."
+
+LANGUAGE
+- No em dashes
+- No "I am thrilled/excited/passionate"
+- No generic openers
+- Write in confident, direct, human voice
+- US companies: dollars, 100k+ terminology
+- Bold the 2-3 most important numbers inline
+
+WHAT MAKES IT PASS THE TEST
+- If you swap the company name and it still works, rewrite it. It is not specific enough.
+- Every paragraph must reference something from the JD directly
+- The reader should feel: "this person built exactly what we need"
+
+
+STEP 5 — FILE DELIVERY
+------------------------
+- Resume: deliver as .docx, filename = FirstName_LastName_Resume_CompanyName.docx
+- Cover letter: deliver as .docx, filename = FirstName_LastName_CoverLetter_CompanyName.docx
+- Both files must open and render correctly in Microsoft Word
+- Validate content with pandoc plain-text check before delivering
+
+
+================================================
+END OF INSTRUCTIONS
+================================================
