@@ -299,7 +299,29 @@ const PROJECTS = [
     skills: ["OpenClaw", "Claude Opus", "Claude Sonnet", "Tailscale", "N8N", "Python", "Telegram API"],
   },
   {
-    tag: "03 / FULLSTACK PRODUCT",
+    tag: "03 / MCP INFRASTRUCTURE",
+    name: "100x Plugin Store",
+    role: "Domain-Specific AI Knowledge Plugins",
+    bullets: [
+      "4 production plugins (Sales, Design, Marketing, Ops) — each packages a Knowledge Base + MCP Server + Skill Files; Claude gets org context once, persists forever across sessions without re-explaining team playbooks",
+      "Cloudflare Workers + KV backend with 7 tools per domain; prompt injection detection, output sanitization, rate limiting (30 req/60s) — consistent security posture across all 4 domains from a single server architecture",
+    ],
+    cta: { label: "Live Site", href: "https://100x-plugin-store.vercel.app/" },
+    skills: ["Cloudflare Workers", "Cloudflare KV", "MCP Protocol", "TypeScript", "Vercel"],
+  },
+  {
+    tag: "04 / FULLSTACK PRODUCT",
+    name: "AI Displacement Risk Calculator",
+    role: "Career Intelligence + 90-Day Roadmap Generator",
+    bullets: [
+      "4-factor risk model (base AI exposure, human necessity, demand elasticity, adoption rate) mapped against O*NET occupational data — role input → risk band + skill gap breakdown in under 2 min; research grounded in Eloundou et al., OpenAI labor frameworks, Anthropic Economic Index",
+      "Generates 3-phase 90-day AI-native learning roadmap per role with interactive nodes; lead capture email unlock; Supabase backend — converts career uncertainty into a structured, role-specific action plan",
+    ],
+    cta: { label: "Live App", href: "https://100x-risk-calculator.vercel.app/" },
+    skills: ["TypeScript", "Supabase", "Next.js", "Vercel", "O*NET Data"],
+  },
+  {
+    tag: "05 / FULLSTACK PRODUCT",
     name: "100xEngineers Events",
     role: "High-Stakes Event Platform — Solo Build",
     bullets: [
@@ -310,7 +332,7 @@ const PROJECTS = [
     skills: ["Next.js", "Supabase", "Razorpay", "TypeScript", "Vercel Edge"],
   },
   {
-    tag: "04 / AGENTIC INFRA + ANALYTICS",
+    tag: "06 / AGENTIC INFRA + ANALYTICS",
     name: "Sage + Scout",
     role: "Closed-Loop Cohort Intelligence System",
     bullets: [
@@ -318,11 +340,11 @@ const PROJECTS = [
       "Closed loop: every query RAG-matched to a specific lecture, persisted to Supabase, surfaced on ops dashboard — confusion data from cohort N directly changes lesson plans for cohort N+1",
       "2-layer routing: keyword classifier at ~0.001s/$0, RAG score fallback only when ambiguous; both bots in a single asyncio process — $25/month vs $50 for two services",
     ],
-    cta: { label: "Dashboard", href: "https://sage-dashboard-100x.vercel.app/" },
+    note: "Internal data — dashboard not public",
     skills: ["FAISS", "GPT-5 Mini", "Supabase", "discord.py", "asyncio", "OpenAI Embeddings"],
   },
   {
-    tag: "05 / MCP INFRASTRUCTURE",
+    tag: "07 / MCP INFRASTRUCTURE",
     name: "Zeno MCP Server",
     role: "Protocol-Native Knowledge Infrastructure",
     bullets: [
@@ -333,7 +355,7 @@ const PROJECTS = [
     skills: ["Cloudflare Workers", "Cloudflare KV", "MCP Protocol", "PostHog", "TypeScript"],
   },
   {
-    tag: "06 / AI SCREENING",
+    tag: "08 / AI SCREENING",
     name: "HireX",
     role: "AI Resume Screener at Scale",
     bullets: [
@@ -344,7 +366,7 @@ const PROJECTS = [
     skills: ["Claude Opus", "Python", "RAG", "Supabase", "Next.js", "Vercel"],
   },
   {
-    tag: "07 / GENERATIVE MEDIA",
+    tag: "09 / GENERATIVE MEDIA",
     name: "Cinematic Presenter",
     role: "A New Primitive for AI Presentations",
     bullets: [
@@ -382,7 +404,7 @@ function ProjectsSection() {
                     <h3 className="font-pixel font-bold leading-tight" style={{ fontSize: 'clamp(16px, 3.5vw, 20px)' }}>{project.name}</h3>
                     <p className="font-mono text-xs text-muted-foreground mt-0.5">{project.role}</p>
                   </div>
-                  {"cta" in project && project.cta && (
+                  {"cta" in project && project.cta ? (
                     <a
                       href={project.cta.href}
                       target="_blank"
@@ -392,7 +414,11 @@ function ProjectsSection() {
                       {project.cta.label}
                       <ExternalLink className="size-3" />
                     </a>
-                  )}
+                  ) : "note" in project && project.note ? (
+                    <span className="flex-shrink-0 rounded-md border border-border px-2 py-1 text-xs text-muted-foreground/50 font-mono italic">
+                      {project.note}
+                    </span>
+                  ) : null}
                 </div>
 
                 <div className="mt-3 border-l border-border pl-4 space-y-2">
